@@ -45,25 +45,21 @@ namespace CodeFirstDemo
         public DbSet<Author> Authors { get; set; }
         public DbSet<Tag> Tags { get; set; }
 
-        private readonly IConfiguration _configuration;
+       // private readonly IConfiguration _configuration;
 
-        public string conString
-        {
-            get
-            {
-                return this.conString;
-            }
-            set => this.conString = _configuration.GetValue<string>("db_settings:connection_string");
-        }
+        //public string conString
+        //{
+        //    get
+        //    {
+        //        return this.conString;
+        //    }
+        //    set => this.conString = _configuration.GetValue<string>("db_settings:connection_string");
+        //}
 
         public BookDbContext()
             : base("Server=localhost;Database=vul_master;Trusted_Connection=True")
         {
 
         }
-
-        //public BookDbContext(DbContextOptions<BookDbContext> options) : base(options)
-        //{
-        //}
     }
 }
